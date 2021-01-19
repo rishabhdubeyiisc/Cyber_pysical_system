@@ -386,22 +386,22 @@
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\main.c</FilePath>
+              <FilePath>..\src_c\main.c</FilePath>
             </File>
             <File>
               <FileName>shell.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\src\shell.c</FilePath>
+              <FilePath>..\src_c\shell.c</FilePath>
             </File>
             <File>
               <FileName>shell.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\src\shell.h</FilePath>
+              <FilePath>..\src_c\shell.h</FilePath>
             </File>
             <File>
               <FileName>startup_rvmdk.S</FileName>
               <FileType>2</FileType>
-              <FilePath>.\src\startup_rvmdk.S</FilePath>
+              <FilePath>..\src_c\startup_rvmdk.S</FilePath>
             </File>
           </Files>
         </Group>

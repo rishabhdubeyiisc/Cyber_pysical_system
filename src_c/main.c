@@ -33,15 +33,11 @@
 void init_adc(void);
 void init_pwm(void);
 void init_uart(void);
-// void set_pwm_duty(uint32_t value , uint32_t delay );
-//void init_adc(void);
-//void set_pwm_duty(int value = 200 , int delay = 10000 );
-// TODO get GPIO key and its address from base 
+
 int main(void)
 {   
     init_pwm();
 		init_uart();
-		//ADC INIT 
     init_adc();
     // command loop
 		UARTNumPut("1234");
@@ -56,17 +52,6 @@ int main(void)
     }
 }
 
-// void set_pwm_duty(uint32_t value , uint32_t delay ){
-// 	// value should be 0 to 400
-//   if (value <= 0 || value > MY_PWM_PERIOD){
-//     return ; 
-//   }
-//   PWMPulseWidthSet(PWM1_BASE, PWM_OUT_4,value);
-//   PWMPulseWidthSet(PWM1_BASE, PWM_OUT_5,value);
-//   PWMPulseWidthSet(PWM1_BASE, PWM_OUT_6,value);
-//   PWMPulseWidthSet(PWM1_BASE, PWM_OUT_7,value);
-//   SysCtlDelay(delay);
-// }
 
 void init_adc(void){
   MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);//enabling ADC0

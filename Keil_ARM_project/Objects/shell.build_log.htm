@@ -21,63 +21,63 @@ Target DLL:      lmidk-agdi.dll V???
 Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
-C:\Users\rishi\OneDrive\Documents\CPS\ex9-tivaware-shell\shell.uvprojx
-Project File Date:  01/15/2021
+C:\Users\rishi\OneDrive\Documents\CPS\ex9-tivaware-shell\git_clone\Cyber_phy_system\Keil_ARM_project\shell.uvprojx
+Project File Date:  01/20/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
 assembling startup_rvmdk.S...
 compiling main.c...
-src/shell.c(49): warning: padding struct 'char_to_int_table_t' with 3 bytes to align 'number' [-Wpadded]
+../src_c/shell.c(49): warning: padding struct 'char_to_int_table_t' with 3 bytes to align 'number' [-Wpadded]
     uint32_t number;
              ^
-src/shell.c(139): warning: implicit conversion loses integer precision: 'int32_t' (aka 'int') to 'char' [-Wimplicit-int-conversion]
+../src_c/shell.c(139): warning: implicit conversion loses integer precision: 'int32_t' (aka 'int') to 'char' [-Wimplicit-int-conversion]
         ch = ROM_UARTCharGetNonBlocking(UART0_BASE);
            ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 C:/ti/TivaWare_C_Series-2.2.0.295\driverlib/rom.h(6616): note: expanded from macro 'ROM_UARTCharGetNonBlocking'
         ((int32_t (*)(uint32_t ui32Base))ROM_UARTTABLE[13])
         ^
-src/shell.c(231): warning: unused parameter 'argc' [-Wunused-parameter]
+../src_c/shell.c(231): warning: unused parameter 'argc' [-Wunused-parameter]
 static void doHelp(int argc, char *argv[])
                        ^
-src/shell.c(231): warning: unused parameter 'argv' [-Wunused-parameter]
+../src_c/shell.c(231): warning: unused parameter 'argv' [-Wunused-parameter]
 static void doHelp(int argc, char *argv[])
                                    ^
-src/shell.c(251): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+../src_c/shell.c(251): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
     while (f>=10.0)
            ^~~
-src/shell.c(253): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+../src_c/shell.c(253): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
         f=f/10.0;
          ~~^~~~~
-src/shell.c(253): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+../src_c/shell.c(253): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
         f=f/10.0;
           ^~
-src/shell.c(259): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+../src_c/shell.c(259): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
             f=f-num;
                ~^~~
-src/shell.c(263): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+../src_c/shell.c(263): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
                 buf[pos++]='0'+num;
                           ~~~~^~~~
-src/shell.c(265): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+../src_c/shell.c(265): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
             f=f*10.0;
              ~~^~~~~
-src/shell.c(265): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+../src_c/shell.c(265): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
             f=f*10.0;
               ^~
-src/shell.c(274): warning: unused parameter 'argc' [-Wunused-parameter]
+../src_c/shell.c(274): warning: unused parameter 'argc' [-Wunused-parameter]
 void doLed(int argc, char *argv[])
                ^
-src/shell.c(313): warning: unused parameter 'argc' [-Wunused-parameter]
+../src_c/shell.c(313): warning: unused parameter 'argc' [-Wunused-parameter]
 static void fanCtrl( int argc, char *argv[]){
                          ^
-src/shell.c(354): warning: excess elements in char array initializer
+../src_c/shell.c(354): warning: excess elements in char array initializer
     char tempbuf[8]={"0","0","0","0","0","0","0","0"};
                          ^~~
-src/shell.c(379): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+../src_c/shell.c(379): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
     TempValueC = (147.5 - ((75.0*3.3 *(float)ADCValues[0])) / 4096.0);
                ~  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-src/shell.c(379): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+../src_c/shell.c(379): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
     TempValueC = (147.5 - ((75.0*3.3 *(float)ADCValues[0])) / 4096.0);
                                      ~^~~~~~~~~~~~~~~~~~~
 16 warnings generated.
