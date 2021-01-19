@@ -1,5 +1,5 @@
-## ARM uContoller intefaced with server using Telegram
-# Files:
+# ARM uContoller intefaced with server using Telegram
+#### Files:
 Project_Folder:
 ./ex9-tivaware-shell - final_project/shell : is the project that can be loaded over shell
 	/src contain all the files for building shell
