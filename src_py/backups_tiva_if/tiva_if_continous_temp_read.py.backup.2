@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+
+# Sample python3 code communicating with the shell running on the tiva board.
+#
+# Note: turn off echo in the shell by removing the following line in the
+#       target code:
+#    ROM_UARTCharPutNonBlocking(UART0_BASE, ch);     // echo
+
+# Load shell program on the TIVA board.
+# Run this code and then reset the TIVA board.
+
+import serial
+import datetime
+import pytz
+import psutil
+import time
+from influxdb import InfluxDBClient
+import threading
+
+class db_client_cls:
+    def __init__(self, IFhost = "localhost" , IFport = 8086 , IFDbname = 'CPU'):
+        self.IFhost = IFhost
+        self.IFport = IFport
+        self.IFDbname = IFDbname
+        #create a client
+        self.client = InfluxDBClient(host=IFhost, port=IFport , database=IFDbname)
+        print(self.get_db_list())
+        to_run_script= input("press y/Y if DB created : ")
+        if (to_run_script.lower() != 'y'):
+            exit(-99)
+        self.swtich_to_DB()
+    
+    def create_DB_by_name(self ):
+        self.client.create_database(self.IFDbname)
+    
+    def get_db_list(self):
+        return self.client.get_list_database()
+    
+    def swtich_to_DB(self):
+        self.client.switch_database(self.IFDbname)
+
+    def write_to_db ( self , data_json , ERR_str = ""):
+        print(data_json)
+        is_data_wr = self.client.write_points(data_json)
+        if(not is_data_wr):
+            print("ERR : data not written " + ERR_str )
+
+db_client = db_client_cls(IFhost="localhost",IFport=8086,IFDbname='CPU')
+
+
+################   UART
+
+# Find out the virtual com port.
+# In Windows, you should see this under Device Manager / Ports.
+# In Linux, you should see the tty port by running "dmesg -y".
+
+# In the following example, it is COM3 on Windows, which translates
+# to /dev/ttyS3 in WSL.
+
+serial_port = '/dev/ttyACM0'
+usb = serial.Serial( serial_port, baudrate=115200, timeout=None)
+
+# Skip greetings and prompt
+print("Press reset")
+prompt = b'> '
+serial_Din = usb.read_until(prompt)
+serial_Din_ascii = serial_Din.decode('ASCII')
+print(serial_Din_ascii, end='')
+
+
+"""
+static cmdtable_t CmdTable[] =
+{
+    {"help", "help: this command \n", doHelp},
+    {"led", "led [r|g|b] [on|off] \n", doLed},
+	{"readTemp", "readTemp c/f \n", readTemp}
+};
+"""
+# Read command from the stdin
+def send_to_shell(shell_command = "readTemp c" , usb_obj = usb):
+    serial_Din_ascii = shell_command
+    serial_Din_ascii = serial_Din_ascii.replace('\n', '\n\r')
+    serial_din = serial_Din_ascii.encode('ASCII')
+    usb_obj.write(serial_din)
+    usb_obj.write(b'\r')
+
+def read_from_shell(usb_obj = usb):
+    # Read the response
+    serial_din = usb.read_until(prompt)
+    # Remove newlines and prompt
+    serial_din = serial_din.replace(b'\n', b'')
+    serial_din = serial_din.replace(prompt, b'')
+    return serial_din.decode('utf-8')
+
+def comm_process(client = db_client):
+    print("IN communication to ARM")
+    while True:
+        try:
+            send_to_shell(shell_command="readTemp c" , usb_obj= usb)
+            serial_din = read_from_shell (usb_obj = usb)
+
+            # Print the response and the prompt
+            time_stamp = datetime.datetime.now(pytz.utc)
+            cpu_usage=psutil.cpu_percent()
+            temprature_C = serial_din #.decode('utf-8')
+            sensor_data_json =  [
+                                    {
+                                        'measurement' : 'temperature',
+                                        'tags' : {'Sensor' : 'thermal_zone0'},
+                                        'time' : time_stamp,
+                                        'fields' : {'cputemp' : float(temprature_C)}
+                                    }
+                                ]
+            client.write_to_db( data_json = sensor_data_json , ERR_str= "SENSOR")
+
+            cpu_data_json = [
+                                {
+                                    'measurement' : 'usage',
+                                    'tags' : {'Sensor' : 'cpu_usage0'},
+                                    'time' : time_stamp ,
+                                    'fields' : {'cpuusage' : float(cpu_usage)}
+                                }
+                            ]
+            client.write_to_db(data_json = cpu_data_json , ERR_str = "CPU")
+            #sleep
+            time.sleep(1)
+        except KeyboardInterrupt:
+            print("KeyboardInterrupt")
+            exit(99)
+
+#comm_process(client=db_client)
+# I have not passed ARGUMENTS TO thread but taken in target fucntion
+comm_thread = threading.Thread(target=comm_process)
+comm_thread.start()

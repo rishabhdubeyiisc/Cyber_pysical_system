@@ -1,0 +1,33 @@
+Dependencies for Project 'shell', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6140000::V6.14::ARMCLANG
+F (.\src\main.c)(0x60056FE4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O2 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I C:/ti/TivaWare_C_Series-2.2.0.295 -I ./src-IC:/Users/rishi/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="531" -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1-o ./objects/main.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED62F0C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED62F0C)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_memmap.h)(0x5FECCE1B)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\pwm.h)(0x5FECCE05)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_ints.h)(0x5FECCE1B)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_gpio.h)(0x5FECCE1B)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\gpio.h)(0x5FECCE05)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\rom.h)(0x5FECCE05)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\rom_map.h)(0x5FECCE05)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\sysctl.h)(0x5FECCE05)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.h)(0x5FECCE05)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\pin_map.h)(0x5FECCE05)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\interrupt.h)(0x5FECCE05)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\adc.h)(0x5FECCE05)
+I (src\shell.h)(0x60016077)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5ED62F0C)
+F (.\src\shell.c)(0x60057043)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O2 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I C:/ti/TivaWare_C_Series-2.2.0.295 -I ./src-IC:/Users/rishi/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="531" -DTM4C123GH6PM -Drvmdk -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1-o ./objects/shell.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED62F0C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED62F0C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5ED62F0C)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_memmap.h)(0x5FECCE1B)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\gpio.h)(0x5FECCE05)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.h)(0x5FECCE05)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\rom.h)(0x5FECCE05)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\rom_map.h)(0x5FECCE05)
+I (src\shell.h)(0x60016077)
+I (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\pwm.h)(0x5FECCE05)
+F (.\src\shell.h)(0x60016077)()
+F (.\src\startup_rvmdk.S)(0x5FF75A24)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto -c-gdwarf-3 -D__EVAL-IC:/Users/rishi/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION=531 -DTM4C123GH6PM-o ./objects/startup_rvmdk.o)
+F (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\rvmdk\driverlib.lib)(0x5FECCE05)()

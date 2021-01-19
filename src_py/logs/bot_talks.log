@@ -1,0 +1,17 @@
+This is a log file bot_talks.log
+Path ./tiva_if_continous_temp_read.py
+    
+__FucntionName__  LOGS  
+    
+__ debuggerClass init __ : Generated_By_Debugger_own : RishabhDubey 2021-01-15 19:39:42.033132
+    
+__ bot.alert_responder.default_command __ : Help 2021-01-15 19:40:48.182835
+__ bot.alert_responder.default_command __ : Shshs 2021-01-15 19:40:50.412279
+__ bot.message_handler.manual_control __ : @ : LED : R : on 2021-01-15 19:41:49.261494
+__ bot.send_msg __ : led_done 2021-01-15 19:41:52.186468
+__ bot.message_handler.manual_control __ : @ : LED : R : OFF 2021-01-15 19:42:33.714646
+__ bot.send_msg __ : led_done 2021-01-15 19:42:36.558319
+__ bot.alert_responder.default_command __ : Help 2021-01-15 19:42:54.916445
+__ bot.alert_responder.alert_responder __ : 65.396 2021-01-15 19:43:32.601035
+__ bot.send_msg __ : fan_ctrl_duty_SET taking action over alert 2021-01-15 19:43:32.922173
+__ bot.alert_responder.default_command __ : Help 2021-01-15 19:43:52.330535

@@ -1,0 +1,103 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Rishabh Dubey, Indian Institute of Science, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      lmidk-agdi.dll V???
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\rishi\OneDrive\Documents\CPS\ex9-tivaware-shell\shell.uvprojx
+Project File Date:  01/15/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_rvmdk.S...
+compiling main.c...
+src/shell.c(49): warning: padding struct 'char_to_int_table_t' with 3 bytes to align 'number' [-Wpadded]
+    uint32_t number;
+             ^
+src/shell.c(139): warning: implicit conversion loses integer precision: 'int32_t' (aka 'int') to 'char' [-Wimplicit-int-conversion]
+        ch = ROM_UARTCharGetNonBlocking(UART0_BASE);
+           ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/ti/TivaWare_C_Series-2.2.0.295\driverlib/rom.h(6616): note: expanded from macro 'ROM_UARTCharGetNonBlocking'
+        ((int32_t (*)(uint32_t ui32Base))ROM_UARTTABLE[13])
+        ^
+src/shell.c(231): warning: unused parameter 'argc' [-Wunused-parameter]
+static void doHelp(int argc, char *argv[])
+                       ^
+src/shell.c(231): warning: unused parameter 'argv' [-Wunused-parameter]
+static void doHelp(int argc, char *argv[])
+                                   ^
+src/shell.c(251): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+    while (f>=10.0)
+           ^~~
+src/shell.c(253): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+        f=f/10.0;
+         ~~^~~~~
+src/shell.c(253): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        f=f/10.0;
+          ^~
+src/shell.c(259): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+            f=f-num;
+               ~^~~
+src/shell.c(263): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                buf[pos++]='0'+num;
+                          ~~~~^~~~
+src/shell.c(265): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+            f=f*10.0;
+             ~~^~~~~
+src/shell.c(265): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+            f=f*10.0;
+              ^~
+src/shell.c(274): warning: unused parameter 'argc' [-Wunused-parameter]
+void doLed(int argc, char *argv[])
+               ^
+src/shell.c(313): warning: unused parameter 'argc' [-Wunused-parameter]
+static void fanCtrl( int argc, char *argv[]){
+                         ^
+src/shell.c(354): warning: excess elements in char array initializer
+    char tempbuf[8]={"0","0","0","0","0","0","0","0"};
+                         ^~~
+src/shell.c(379): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+    TempValueC = (147.5 - ((75.0*3.3 *(float)ADCValues[0])) / 4096.0);
+               ~  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/shell.c(379): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+    TempValueC = (147.5 - ((75.0*3.3 *(float)ADCValues[0])) / 4096.0);
+                                     ~^~~~~~~~~~~~~~~~~~~
+16 warnings generated.
+compiling shell.c...
+linking...
+Program Size: Code=5944 RO-data=228 RW-data=0 ZI-data=520  
+".\Objects\shell.axf" - 0 Error(s), 16 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\rishi\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
