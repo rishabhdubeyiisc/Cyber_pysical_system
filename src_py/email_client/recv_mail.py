@@ -6,8 +6,8 @@ import webbrowser
 import os
 
 # account credentials
-username = "rishidd7devxunsecure@gmail.com"
-password = "r8aHxKJ9Db2snBT"
+username = ""
+password = ""
 
 
 def clean(text):

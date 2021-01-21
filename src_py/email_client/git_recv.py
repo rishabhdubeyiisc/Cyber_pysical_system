@@ -5,8 +5,8 @@ import imaplib
 
 imap_ssl_host = 'imap.gmail.com'  # imap.mail.yahoo.com
 imap_ssl_port = 993
-username = 'rishidd7devxunsecure@gmail.com'
-password = 'r8aHxKJ9Db2snBT'
+username = ''
+password = ''
 
 # Restrict mail search. Be very specific.
 # Machine should be very selective to receive messages.
