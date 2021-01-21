@@ -1,4 +1,4 @@
-# ARM uContoller intefaced with server using Telegram
+# ARM uContoller intefaced with garfana server using Telegram
 ## Files:
 ### src_c
 	backups_shell
