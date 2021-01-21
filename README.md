@@ -1,11 +1,11 @@
-# ARM uContoller intefaced with garfana server using Telegram
-## Files:
-### src_c
+## ARM uContoller intefaced with garfana server using Telegram
+### Files:
+#### ./src_c
 	main.c
 	shell.c
 	shell.h
 	startup_rvmdk.S
-### src_py
+#### ./src_py
 	logs
 	screenshots
 	class_BOT.py
@@ -15,5 +15,5 @@
 	tiva_debug_IF.py
 	tiva_if_continous_temp_read.py
 
-### Keil_ARM_project
+#### ./Keil_ARM_project
 	Contains project
