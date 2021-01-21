@@ -1,5 +1,5 @@
 # ARM uContoller intefaced with server using Telegram
-Files:
+#### Files:
 Project_Folder:
 ./ex9-tivaware-shell - final_project/shell : is the project that can be loaded over shell
 	/src contain all the files for building shell
@@ -8,9 +8,7 @@ Project_Folder:
 		/shell.h
 		/startup_rvmdk.s
 		```
-		$ Use Kiel to build project with 
-		$ these files 		    
-		$ as Src Run Putty or tiva_if file from src folder 
+		Use Kiel to build project with these files as Src Run Putty or tiva_if file from src folder 
 		```
 ./source_code : Contains all the code relevant to this project
 	/py_f
@@ -23,13 +21,13 @@ Project_Folder:
 			and wr over the DB sources
 		/class_debugger _____________: 
 			Class debuggers is to create log files 
-			it creates a folder so named ./logs 
+			it creates a folder so named /logs 
 			in current directory
 		/class_tiva _________________: 
 			Class to create a 	
 			serial IF and to communicate 
 			with tiva board
-		/tiva_debug_IF ______________: 
+		/tiva_debug_IF_______________: 
 			so was used as a reference
 		/tiva_if_continous_temp_read_: 
 			This is the main python code 
