@@ -1,7 +1,6 @@
 # ARM uContoller intefaced with garfana server using Telegram
 ## Files:
 ### src_c
-	examples_do_not_edit
 	main.c
 	shell.c
 	shell.h
